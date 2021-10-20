@@ -1,136 +1,348 @@
-﻿<!docktype html> <!--указание типа документа-->
+<!docktype html> <!--указание типа документа-->
 <html>
     <head>
         <meta charset="utf-8"> <!--указание кодировки документа-->
         <style type="text/css">
-        .body 
+        @media screen and (min-width: 1000px) 
         {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin: 0;
-            font-size: h1;
+            .body
+            {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+                margin: 0;
+            }
+            .My-logo
+            {            
+                max-width: 100%;
+                margin-left: 10;
+            }
+            .Button_Setup
+            {           
+                float: right; 
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1em;   
+                padding: 10; 
+                display: flex;
+                flex-direction: row-reverse;
+            }      
+            .header       
+            {                  
+                width: 100%;             
+            } 
+            .three-blocks
+            {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                font-size: 1.5em;
+            }       
+            .section        
+            {           
+                float: left;           
+                width: 15%;  
+                line-height: 2;
+                font-size: 1.10em;      
+            }       
+            .main       
+            {          
+                float: left;          
+                width: 35%;       
+            } 
+            .My-FI       
+            {           
+                float: left;            
+                width: 85%;   
+                margin-top: 40;
+            }  
+            .My-main-photo       
+            {           
+                float: left;            
+                max-width: 100%;        
+                margin-top: 10;         
+            }                     
+            .aside      
+            {           
+                float: left; 
+                margin-top: 100;      
+            }  
+            .My-information     
+            {           
+                line-height: 1.2;           
+                float: left;                     
+                text-align: left;       
+            }                           
+            .Button-show-detailed-information       
+            {          
+                text-align: center;       
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1em;   
+                padding: 10; 
+            }  
+            .My-friends-block
+            {
+                width: 100%;
+            }  
+            .Text-friends
+            {
+                float: left;           
+                width: 100%; 
+                text-align: left; 
+                margin: 10;
+                font-size: 1.25em;
+            }    
+            .friends        
+            {          
+                display: flex;           
+                flex-direction: row;            
+                flex-wrap: wrap;                   
+                text-align: center;           
+                line-height: 0;              
+                float: left;   
+                justify-content: space-between;  
+                width: 100%;
+                margin-bottom: 10;
+            }
+            .friends-photo
+            {
+                margin: 10;
+                border-radius: 50%;   
+            }  
+            .Text-Photo       
+            {           
+                margin: 10;           
+                width: 100%; 
+                font-size: 1.25em;
+                text-align: left;
+            }  
+            .My-photo-block
+            {
+                width: 100%;
+                float: left;
+                display: flex;
+                flex-direction: row;            
+                flex-wrap: wrap; 
+                justify-content: space-between;
+            }
+            .My-photo      
+            {          
+                margin: 10;           
+                max-height: 150px;    
+            }     
+            .Text-News      
+            {          
+                float: left;           
+                margin: 10; 
+                font-size: 1.25em;   
+                text-align: left;
+            }      
+            .Search       
+            {          
+                float: right;           
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1em;   
+                padding: 10;   
+                display: flex;
+                flex-direction: row-reverse;
+            }                  
+            .My-icon      
+            {           
+                margin: 10;           
+                border-radius: 50%;            
+                max-width: 58px;           
+                float: left;           
+                line-height: 0;          
+                width: 50%;        
+            }   
+            .Text-note       
+            {           
+                float: left;           
+                width: 100%; 
+                text-align: left;     
+                font-size: 1em;
+            }     
+            .My-photo-on-the-wall      
+            {          
+                margin: 10;           
+                max-height: 300px;      
+            }         
+            .Note-on-the-wall
+            {
+                width: 100%;
+                float: left;
+            }
         }
-        .My-logo
+        @media screen and (max-width: 999px) 
         {
-            max-width: 100%;
-        }
-        .Button_Setup
-        {
-            float: right;
-        }
-        .header
-        {
-            float: inline-start;
-            width: 100%;
-            height: 10%;
-        }
-        .section
-        {
-            float: left;
-            width: 16%;
-        }
-        .main
-        {
-            float: left;
-            width: 30%;
-        }
-        .aside
-        {
-            float: right;
-            width: 54%;
-        }
-        .My-page-top-block
-        {
-            margin: 10;
-        }
-        .My-FI
-        {
-            float: left;
-            width: 85%;
-        }
-        .My-Network-Status
-        {
-            float: left;
-            width: 100%;
-            text-align: right;
-        }
-        .My-main-photo
-        {
-            float: left;
-            max-width: 95%;
-            margin:10;
-        }
-        .Button-write-message
-        {
-            float: left;
-            width: 50%;
-            text-align: center;
-        }
-        .Button-add-to-friends
-        {
-            float: right;
-            width: 50%;
-            text-align: center;
-        }
-        .My-information
-        {
-            line-height: 1.2;
-            float: left;
-            width: 100%;
-            text-align: left;
-        }
-        .Button-show-detailed-information
-        {
-            text-align: center;
-        }
-        .My-text-block
-        {
-            margin: 10;
-            width: 100%;
-        }
-        .Text-News
-        {
-            float: left;
-            width:80%;
-        }
-        .Search
-        {
-            float: right;
-            width:20%;
-        }
-        .friends 
-        {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 0;
-            margin: 10;
-            float: left;
-        }
-        .My-photo
-        {
-            margin: 10;
-            max-height: 150px;
-        }
-        .My-icon
-        {
-            margin: 10;
-            border-radius: 50%;
-            max-width: 58px;
-            float: left;
-            line-height: 0;
-            width: 50%;
-        }
-        .My-photo-on-the-wall
-        {
-            margin: 10;
-            max-height: 300px;
-        }
-        .Text-note
-        {
-            float: left;
-            width: 100%;
+            .body
+            {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+                margin: 0;
+            }
+            .My-logo
+            {            
+                max-width: 100%;
+                margin-left: 10;
+            }
+            .Button_Setup
+            {           
+                float: right;        
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1em;   
+                padding: 10; 
+                display: flex;
+                flex-direction: row-reverse;
+            }      
+            .header       
+            {                
+                width: 100%;             
+            }  
+            .three-blocks
+            {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                font-size: 1.5em;
+            }      
+            .section        
+            {           
+                float: left;           
+                width: 20%;   
+                line-height: 2;
+                font-size: 1em;    
+            }       
+            .main       
+            {          
+                float: left;       
+                width: 35%;       
+            }  
+            .My-FI       
+            {           
+                float: left;            
+                width: 85%;   
+                margin-top: 35;  
+            }    
+            .My-main-photo       
+            {           
+                float: left;            
+                max-width: 300px;    
+                margin-top: 10;            
+            }      
+            .aside      
+            {           
+                float: left;  
+                margin-top: 50;  
+            }   
+            .My-information     
+            {           
+                line-height: 1;           
+                float: right;            
+                width: 100%;           
+                text-align: left;       
+            }                                    
+            .Button-show-detailed-information       
+            {          
+                text-align: center; 
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1em;   
+                padding: 10;       
+            }
+            .My-friends-block
+            {
+                width: 100%;
+            }   
+            .Text-friends
+            {
+                float: left;           
+                width: 100%; 
+                text-align: left; 
+                margin: 10;
+                font-size: 1.25em;
+            }    
+            .friends        
+            {          
+                display: flex;           
+                flex-direction: row;            
+                flex-wrap: wrap;                   
+                text-align: center;           
+                line-height: 0;              
+                float: left;   
+                justify-content: space-between;  
+                width: 100%;
+                margin-bottom: 10;
+                font-size: 1em;
+            }
+            .friends-photo
+            {
+                margin: 10;
+                border-radius: 50%;   
+            }        
+            .Text-Photo     
+            {           
+                margin: 10;           
+                width: 100%;     
+                text-align: left;   
+                font-size: 1.25em;              
+            }  
+            .My-photo-block
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: row;            
+                flex-wrap: wrap; 
+                justify-content: space-between;
+            } 
+            .My-photo      
+            {          
+                margin: 10;           
+                max-height: 150px;      
+            }   
+            .Text-News      
+            {          
+                float: left;          
+                margin: 10;    
+                font-size: 1.25em;
+                text-align: left;
+            }        
+            .Search       
+            {          
+                float: right;                
+                margin: 15;   
+                background-color: #e668f7;
+                font-size: 1.5em;   
+                padding: 10;  
+                display: flex;
+                flex-direction: row-reverse;
+            }   
+            .My-icon      
+            {           
+                margin: 10;           
+                border-radius: 50%;            
+                max-width: 58px;           
+                float: left;           
+                line-height: 0;          
+                width: 50%;        
+            }  
+            .Text-note       
+            {           
+                float: left;           
+                width: 100%;  
+                text-align: left; 
+                font-size: 1em;   
+            }      
+            .My-photo-on-the-wall      
+            {          
+                margin: 10;           
+                max-height: 300px;      
+            }         
+            .Note-on-the-wall
+            {
+                width: 100%;
+                float: left;
+            }
         }
         </style>
         <title>
@@ -139,88 +351,93 @@
     </head>
     <body class="body">
         <div class="header">
-            <img src="логотип.png" alt="логотип" class="My-logo">
-            <div class="Button_Setup"><button><h6>Настройки</h6></button></div>  
-        </div>    
-        <hr>           
-        <div class="section">
-            <button><h1>Профиль</h1></button> 
-            <button><h2>Друзья</h2></button>
-            <button><h2>Фотографии</h2></button>
-            <button><h2>Видеозаписи</h2></button>
-            <button><h2>Аудиозаписи</h2></button>
-            <button><h2>Сообщения</h2></button>
-            <button><h2>Сообщества</h2></button>
-            <button><h2>Новости</h2></button>       
-        </div>
+            <img src="text-1634730272232.png" alt="логотип" height="83px" class="My-logo">
+            <button class="Button_Setup">Настройки</button>
+        </div>   
+        <hr> 
+        <div class="three-blocks"> 
+        <ul class="section">
+            <li>Профиль</li> 
+            <li>Друзья</li>
+            <li>Фотографии</li>
+            <li>Видеозаписи</li>
+            <li>Аудиозаписи</li>
+            <li>Сообщения</li>
+            <li>Сообщества</li>
+            <li>Новости</li>       
+        </ul>
         <div class="main">      
-            <div class="My-FI"><h1>Элина Янабирдина</h1></div>
-            <img src="https://im0-tub-ru.yandex.net/i?id=a89af845666972f5a5f5128d54d64ed0-l&n=13" alt="кошечка" class="My-main-photo">
-            <div class="Button-write-message"><button><h3>Написать письмо</h3></button></div>
-            <div class="Button-add-to-friends"><button><h3>Добавить в друзья</h3></button></div>
-            <p><div class="Text-note"><h2>Друзья 168</h2></div></p>
-            <div class="friends">
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=de40f4f2631624d4b696e7f9f4c41e80-l&n=13" alt="Анна" width="75px" height="75px" class="friends">
-                    <h4><p>Анна</p></h4>
-                    <h4><p>Силакова</p></h4>
-                </div>
-                <div>           
-                     <img src="https://pbs.twimg.com/media/Cz4AQJjWQAA4GkA.jpg" alt="Лада" width="75px" height="75px" class="friends">
-                    <h4><p>Лада</p></h4>
-                    <h4><p>Вересова</p></h4>
-                </div>
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=4d1d698e724829d0b694ee452c47d2e7-srl&n=13" alt="Вова" width="75px" height="75px" class="friends">
-                    <h4><p>Владимир</p></h4>
-                    <h4><p>Ключников</p></h4>
-                </div>       
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=a90af8780484e4f4b0a29e5bbee3b2fa-l&n=13" alt="Соня" width="75px" height="75px" class="friends">
-                    <h4><p>Софья</p></h4>
-                    <h4><p>Черепова</p></h4>
-                </div>     
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=42ce385432920eebafd0fa74d2d8b5a3-l&n=13" alt="Дима" width="75px" height="75px" class="friends">
-                    <h4><p>Ivar</p></h4>
-                    <h4><p>Lenken</p></h4>
-                </div>          
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=9b541e06635283813cb0f4deaa9662cf-l&n=13" alt="Рома" width="75px" height="75px" class="friends">
-                    <h4><p>Рома</p></h4>
-                    <h4><p>Кудров</p></h4>
-                </div>
-                <div>
-                    <img src="https://im0-tub-ru.yandex.net/i?id=4bd7817005d8da066e75aa3e58619ea7-l&n=13" alt="Влад" width="75px" height="75px" class="friends">
-                    <h4><p>Vlad</p></h4>
-                    <h4><p>Zimin</p></h4>
-                </div>
-            </div>
+            <div class="My-FI">Элина Янабирдина</div>
+            <img src="https://im0-tub-ru.yandex.net/i?id=a89af845666972f5a5f5128d54d64ed0-l&n=13" alt="кошечка" class="My-main-photo">          
         </div>
         <div class="aside">
-            <div class="My-Network-Status"><h2>online</h2></div>
             <div class="My-information">
-                <h2>inst: gw2pe</h2>
-                <h2>Город: Санкт-Петербург</h2>
-                <h2>Дата рождения: 10 декабря 2002 год</h2>
-                <h2>Семейное положение: не замужем</h2>
-                <div class="Button-show-detailed-information"><h2>Показать дополнительную информацию</h2></div>
-                <hr>             
-                <div class="My-text-block"><h2><font color="black">Фотографии 105</font></h2></div> 
-                <img src="https://pbs.twimg.com/media/D9LbeTdX4AE_1Xa.jpg" alt="Я кошка, а не посудомойка" class="My-photo">             
-                <img src="https://4tololo.ru/sites/default/files/images/20161404165251.jpg" alt="Я учусь" class="My-photo">           
-                <img src="https://sun1-28.userapi.com/c630828/v630828203/32f00/E30jXy8n5Os.jpg" alt="Я на работе" class="My-photo">                        
-                <hr>
-                <div class="Text-News"><h2>Новости</h2></div>
-                <div class="Search"><button><h2>Поиск</h2></button></div>                
-                <div class="Text-note">
-                    <img src="https://im0-tub-ru.yandex.net/i?id=a89af845666972f5a5f5128d54d64ed0-l&n=13" alt="кошечка" class="My-icon">
-                    <h4><font color="black">Элина Янабирдина</font></h4> 
-                    <h4><font color="black">23 сен 2021 в 18:48</font></h4>
-                </div>
-                <p><div class="My-text-block"><h4><font color="black">Фотограф Ключников Владимир</font></h4></div></p>
-                <p><img src="https://i.ytimg.com/vi/6gwfqhMHGJk/maxresdefault.jpg" alt="Я музицирую" class="My-photo-on-the-wall"></p> 
-            </div>     
+                <p>inst: gw2pe</p>
+                <p>Город: Санкт-Петербург</p>
+                <p>Дата рождения: 10 декабря 2002 год</p>
+                <p>Семейное положение: не замужем</p>
+                <button class="Button-show-detailed-information">Дополнительная информация</button>
+            </div>
+        </div>
+        </div> 
+        <div class="My-friends-block">
+            <div class="Text-friends">Друзья 168</div>
+            <div class="friends">
+                    <div>
+                        <img src="https://img5.goodfon.ru/original/2048x2048/1/15/koshka-kot-vzgliad-morda-fon-portret-8.jpg" alt="Анна" width="100px" height="100px" class="friends-photo">
+                        <p>Анна</p>
+                        <p>Силакова</p>
+                    </div>
+                    <div>           
+                         <img src="https://pbs.twimg.com/media/Cz4AQJjWQAA4GkA.jpg" alt="Лада" width="100px" height="100px" class="friends-photo">
+                        <p>Лада</p>
+                        <p>Вересова</p>
+                    </div>
+                    <div>
+                        <img src="https://im0-tub-ru.yandex.net/i?id=4d1d698e724829d0b694ee452c47d2e7-srl&n=13" alt="Вова" width="100px" height="100px" class="friends-photo">
+                        <p>Владимир</p>
+                        <p>Ключников</p>
+                    </div>       
+                    <div>
+                        <img src="https://im0-tub-ru.yandex.net/i?id=a90af8780484e4f4b0a29e5bbee3b2fa-l&n=13" alt="Соня" width="100px" height="100px" class="friends-photo">
+                        <p>Софья</p>
+                        <p>Черепова</p>
+                    </div>     
+                    <div>
+                        <img src="https://im0-tub-ru.yandex.net/i?id=42ce385432920eebafd0fa74d2d8b5a3-l&n=13" alt="Дима" width="100px" height="100px" class="friends-photo">
+                        <p>Ivar</p>
+                        <p>Lenken</p>
+                    </div>          
+                    <div>
+                        <img src="https://im0-tub-ru.yandex.net/i?id=9b541e06635283813cb0f4deaa9662cf-l&n=13" alt="Рома" width="100px" height="100px" class="friends-photo">
+                        <p>Рома</p>
+                        <p>Кудров</p>
+                    </div>
+                    <div>
+                        <img src="https://im0-tub-ru.yandex.net/i?id=4bd7817005d8da066e75aa3e58619ea7-l&n=13" alt="Влад" width="100px" height="100px" class="friends-photo">
+                        <p>Vlad</p>
+                        <p>Zimin</p>
+                    </div>
+            </div>
+        </div> 
+        <div class="My-photo-block">
+            <div class="Text-Photo">Фотографии 105</div>                 
+            <img src="https://pbs.twimg.com/media/D9LbeTdX4AE_1Xa.jpg" alt="Я кошка, а не посудомойка" class="My-photo">                             
+            <img src="https://4tololo.ru/sites/default/files/images/20161404165251.jpg" alt="Я учусь" class="My-photo">                 
+            <img src="https://sun1-28.userapi.com/c630828/v630828203/32f00/E30jXy8n5Os.jpg" alt="Я на работе" class="My-photo"> 
+            <img src="https://krasivosti.pro/uploads/posts/2021-07/1625868800_46-krasivosti-pro-p-kotu-zharko-koti-krasivo-foto-49.jpg" alt="Я на отдыхе" class="My-photo">
+            <img src="https://club.foto.ru/gallery/images/preview/2011/02/14/1718257.jpg" alt="Я богатая" class="My-photo">
+            <img src="https://99px.ru/sstorage/53/2017/06/tmb_201962_8159.jpg" alt="Я в домике" class="My-photo">
+        </div>                       
+        <div class="Text-News">Новости</div>
+        <button class="Search">Поиск</button>                
+        <div class="Text-note">
+            <img src="https://im0-tub-ru.yandex.net/i?id=a89af845666972f5a5f5128d54d64ed0-l&n=13" alt="кошечка" class="My-icon">
+            <p>Элина Янабирдина</p> 
+            <p>23 сен 2021 в 18:48</p>
+        </div>
+        <div class="Note-on-the-wall">
+            <div class="My-photo-on-the-wall"><p><img src="https://i.ytimg.com/vi/6gwfqhMHGJk/maxresdefault.jpg" alt="Я музицирую" height="200px"></p></div>    
         </div>
     </body>
 </html>

@@ -1,14 +1,16 @@
 <html>
     <head>
         <meta charset="utf-8"> <!--указание кодировки документа-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
-        @media screen and (min-width: 1000px) 
-        {
-            .body
+        
+                 
+            body
             {
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
-                margin: 0;
                 background: linear-gradient(0deg, #e668f7, white);
+                max-width: 100%;
+                margin: 0;
             }
             .My-logo
             {            
@@ -185,15 +187,16 @@
                 width: 100%;
                 float: left;
             }
-        }
+        
         @media screen and (max-width: 999px) 
         {
-            .body
+            body
             {
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
-                margin: 0;
+                margin: 10;
                 padding: 0;
                 background: linear-gradient(0deg, #e668f7, white);
+                max-width: 100%;
             }
             .My-logo
             {            
@@ -378,7 +381,7 @@
             Моя страница
         </title>       
     </head>
-    <body class="body">
+    <body>
         <div class="header">
             <img src="text-1634730272232.png" alt="логотип" height="83px" class="My-logo">
             <button class="Button_Setup">Настройки</button>
